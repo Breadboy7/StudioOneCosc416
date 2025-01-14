@@ -25,7 +25,7 @@ public class BallRoll : MonoBehaviour
             movementVector += Vector2.right;
 
         Vector3 inputXZPlane = new Vector3(movementVector.x, 0, movementVector.y);
-        sphereRigidbody.AddForce(inputXZPlane * ballSpeed * Time.deltaTime);
+        sphereRigidbody.AddForce(inputXZPlane * ballSpeed);
         Debug.Log("Resultant Vector: " + movementVector);
         Debug.Log("Resultant 3D Vector: " + movementVector);
 
