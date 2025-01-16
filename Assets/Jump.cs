@@ -4,17 +4,19 @@ public class Jump : MonoBehaviour
 {
     private bool canJump;
     [SerializeField]private float deploymentHeight;
+    [SerializeField] private float jumpHeight;    
 
     // Update is called once per frame
     void Update()
     {
-        CheckGroundStatus();
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            CheckGroundStatus();
             if (canJump)
             {
                 canJump = false;
-                //NEED TO ADD FORCE UP
+                gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0, jumpHeight, 0));
+                Debug.Log("Yay!");
             }
         }
 
@@ -31,12 +33,12 @@ public class Jump : MonoBehaviour
             if (hit.collider == null)
             {
                 canJump = false;
-                Debug.Log(canJump);
+                //Debug.Log(canJump);
             }
             else
             {
                 canJump = true;
-                Debug.Log(canJump);
+               // Debug.Log(canJump);
             }
 
         }

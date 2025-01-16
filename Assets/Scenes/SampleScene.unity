@@ -1194,7 +1194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7a45557ab28bc419ac63f787befe2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deploymentHeight: 0
+  deploymentHeight: 0.5
+  jumpHeight: 250
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
